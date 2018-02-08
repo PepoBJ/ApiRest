@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebApiRest.Filters;
 
 namespace WebApiRest
 {
@@ -12,6 +13,8 @@ namespace WebApiRest
             // Configuración y servicios de API web
 
             // Rutas de API web
+            config.MessageHandlers.Add(new BasicAuthMessageHandler());
+
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

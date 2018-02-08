@@ -13,7 +13,7 @@ using WebApiRest.Filters;
 
 namespace WebApiRest.Controllers
 {
-    [BasicAuthorize]
+    [Authorize]
     public class PersonasController : ApiController
     {
         private webapiEntities db = new webapiEntities();
